@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row mt-5 justify-content-center">
+    <div class="card card-custom mx-2 mb-3" *ngFor="let user of users">
+
+      <img class="btn-md" src="../../assets/images/male.png" height="90" width="90" alt="" style="border-radius:50%;">
+
+      <div (click)="navigateToUserDetail(user)" class="card-body">
+        <h5 class="card-title"><b>{{ user.name }}</b></h5>
+        <p class="card-text">
+          User Name: {{user.username}}
+        </p>
+        <p class="card-text">
+          Email: {{user.email}}
+        </p>
+        <button (click)="navigateToUserDetail(user)" class="btn btn-primary" type=”button”>User Details</button>
+      </div>
+    </div>
+
+  </div>
+</div>
